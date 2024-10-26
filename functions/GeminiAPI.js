@@ -6,20 +6,22 @@ const { getStorage, ref, uploadBytes } = require("firebase/storage");
 
 initializeApp();
 
-// Initialize Firebase Storage
 const storage = getStorage();
-const userFile = ref(storage, 'file.pdf');
 
-// Simulate a file to upload (replace `file` with your actual file data)
-//const file = /* your file data here */;
+exports.data = onRequest(
+    {timeoutSeconds: 1200},
+    (req, res) => {
+        const userFile = req.body;
 
-uploadBytes(userFile, file)
-  .then((snapshot) => {
-    console.log('Successfully uploaded file!');
-  })
-  .catch((error) => {
-    console.error('File upload failed: ', error);
-  });
+        uploadBytes(userFile, file)
+            .then((snapshot) => {
+                console.log('Successfully uploaded file!');
+            })
+        .catch((error) => {
+            console.error('File upload failed: ', error);
+        });
+    }
+)
 
 
 //const { GoogleGenerativeAI } = require("@google/generative-ai");
