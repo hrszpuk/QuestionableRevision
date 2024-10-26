@@ -1,9 +1,8 @@
 const { onRequest } = require("firebase-functions/v2/https");
-const { initializeApp } = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
+const admin = require("firebase-admin");
 const fetch = require("node-fetch");
 
-initializeApp();
 const db = getFirestore();
 
 exports.generateQuestionsAndAnswers = onRequest(async (req, res) => {

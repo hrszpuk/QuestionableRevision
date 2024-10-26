@@ -1,15 +1,16 @@
-const {initializeApp} = require("firebase/app");
 const {onRequest} = require("firebase-functions/v2/https");
-const {uploadBytes} = require("firebase/storage");
+const {uploadBytes} = require("firebase-admin/storage");
 const cors = require('cors')({ origin: true });
-
-initializeApp();
 
 exports.uploadpdf = onRequest(
     {timeoutSeconds: 1200},
     (req, res) => {
         cors(req, res, () => {
             const userFile = req.body;
+
+            if (userFile === "") {
+                res.status(200).send("You got no rizz brotha");
+            }
 
             uploadBytes(userFile, userFile)
                 .then((snapshot) => {
