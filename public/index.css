@@ -16,14 +16,14 @@ h2 {
 
 body {
   background-color: #9FBFB5;
+  height: 100%;
 }
 
 .Host-Client {
   background-color: #1D96B6;
   border-radius: 5px;
   padding: 16px 16px;
-  display: grid;
-  grid-auto-flow: row;
+  position: absolute;
   gap: 10px;
   align-items: center;
   justify-items: center;
