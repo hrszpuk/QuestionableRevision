@@ -1,0 +1,8 @@
+20:02:29.741 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:02:29.975 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+20:02:37.737 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 165ms, init: 0ms
+20:02:37.821 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace questionablerevision-default-rtdb status Active to Active
+20:10:47.578 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+20:10:47.587 [NamespaceSystem-akka.actor.default-dispatcher-10] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: questionablerevision-default-rtdb
+20:10:47.597 [NamespaceSystem-akka.actor.default-dispatcher-11] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for questionablerevision-default-rtdb
+20:10:47.605 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
