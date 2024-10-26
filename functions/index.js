@@ -1,11 +1,9 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
-const cors = require('cors')({ origin: true });
+const echo = require("./src/echo");
+const uploadpdf = require("./src/uploadpdf");
+const generateqaa = require("./src/generateq&a");
 
-admin.initializeApp();
+// Remember to add new functions to the rewrites in the same format as the others.
+exports.echo = echo;
+exports.uploadpdf = uploadpdf;
+exports.generateqaa = generateqaa;
 
-exports.echo = functions.https.onRequest((req, res) => {
-    cors(req, res, () => {
-        res.status(200).send({ echo: req.body });
-    });
-});
