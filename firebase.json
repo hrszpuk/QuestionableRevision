@@ -33,7 +33,13 @@
       {
         "source": "/function/uploadpdf",
         "function": {
-          "functionId": "uploadpdf"
+          "functionID": "uploadBytes"
+        }
+      },
+      {
+        "source": "function/generateQuestionsAndAnswers",
+        "function": {
+          "functionID": "generateQuestionsAndAnswers"
         }
       }
     ]
