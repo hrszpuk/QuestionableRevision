@@ -30,7 +30,9 @@
       },
       {
         "source": "function/uploadpdf",
-        "functionId": "uploadBytes"
+        "function": {
+          "functionId": "uploadBytes"
+        }
       }
     ]
   },
