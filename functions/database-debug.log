@@ -1,4 +1,9 @@
-22:19:05.032 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-22:19:05.262 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
-22:19:18.439 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 165ms, init: 0ms
-22:19:18.525 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace questionablerevision-default-rtdb status Active to Active
+23:52:25.929 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+23:52:26.188 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+23:52:33.724 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 161ms, init: 0ms
+23:52:33.806 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace questionablerevision-default-rtdb status Active to Active
+00:37:09.550 [FirebaseWorkerPool-1-2] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace questionablerevision, but the emulator is configured for questionablerevision-default-rtdb. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+00:37:09.558 [NamespaceSystem-akka.actor.default-dispatcher-60] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision successfully activated FBKV (SurveyIdle(0)) wait: 3ms, init: 0ms
