@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="start.css">
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="host.css">
 </head>
 <body>
 <div class="main">
+    <h1>Players in lobby: <span id="val">0</span> </h1>
+    <button id="submit-game-btn" class="Main-Button" onclick="startGame()">Start Game</button>
 
 </div>
 </body>
+<script>
+
+
+    const val = document.getElementById('val');
+    val.textContent = 3;
+
+
+        function startGame() {
+        // Your game logic here
+        console.log("Game started!");
+    }
+</script>
 
 </html>
