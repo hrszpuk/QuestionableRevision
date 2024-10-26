@@ -1,0 +1,29 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+body {
+  background-color: #9FBFB5;
+}
+
+.Answer {
+  display: flex;
+  text-align: center;
+  font-size: 36px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
