@@ -1,0 +1,4 @@
+15:15:49.690 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+15:15:49.948 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+15:15:57.579 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 178ms, init: 0ms
+15:15:57.666 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace questionablerevision-default-rtdb status Active to Active
