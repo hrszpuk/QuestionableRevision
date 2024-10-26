@@ -1,25 +1,25 @@
 h1 {
-  position: fixed;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font-family: 'Times New Roman', Times, serif;
 }
 
-h2 {
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font-family: 'Times New Roman', Times, serif;
+
 }
+
 
 body {
   background-color: #9FBFB5;
 }
 
 .Answer {
-  position: fixed;
+  display: flex;
   text-align: center;
   font-size: 36px;
   top: 30%;
