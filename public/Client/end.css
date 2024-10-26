@@ -1,30 +1,19 @@
 .Main-Button {
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position: absolute;
-    align-items: center;
-    justify-items: center;
+
+
+
 }
 
 #finish-game-btn
 {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+    padding: 10px
+;
+
     align-items: center;
     justify-items: center;
     justify-self: center;
     align-self: center;
-
 
 }
 
@@ -36,12 +25,29 @@ body {
 {
     padding: 10px
 ;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
     align-items: center;
     justify-items: center;
     justify-self: center;
     align-self: center;
+
+    background-color: cadetblue;
+    border-radius: 10px;
+
+}
+body {
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+.image-container {
     position: absolute;
+
+    left: 0;
+    transform: translateY(-50%);
+    white-space: nowrap; /* Prevents line breaks for the image */
+}
+
+.looping-image {
+    height: 900px; /* Adjust the height as needed */
 }
