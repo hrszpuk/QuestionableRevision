@@ -35,8 +35,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* 
-.Main-Button {
+.Back-Button {
   background-color: white;
   border: none;
   border-radius: 5px;
@@ -51,4 +50,4 @@ body {
   position: relative;
   align-items: center;
   justify-items: center;
-} */
+}
