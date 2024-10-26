@@ -1,7 +1,6 @@
-const {initializeApp, app} = require("firebase/app");
+const {initializeApp} = require("firebase/app");
 const {onRequest} = require("firebase-functions/v2/https");
 const cors = require('cors')({ origin: true });
-app.use(cors);
 
 initializeApp();
 
