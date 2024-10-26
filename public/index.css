@@ -1,0 +1,53 @@
+h1 {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #9FBFB5;
+}
+
+.Host-Client {
+  background-color: #1D96B6;
+  border-radius: 5px;
+  padding: 16px 16px;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Main-Button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  justify-items: center;
+}

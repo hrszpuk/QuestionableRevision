@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="host.css">
+</head>
+<body>
+<div class="main">
+    <div class="Title">
+        <h1>Questionable Revision</h1>
+        <h2>Select Option</h2>
+    </div>
+    <div class="Host-Client">
+        <div class="filedrag">
+            <form id="form">
+                <label for="file">Choose file to upload</label>
+                <input type="file" id="file" name="file">
+                <button type="submit" id="submit-btn">Load File</button>
+            </form>
+        </div>
+
+        <script>
+            const form = document.getElementById('form');
+
+            form.addEventListener('submit', async event => {
+                event.preventDefault();
+
+                const data = new FormData(form);
+
+                console.log(Array.from(data));
+
+                try {
+                    const res = await fetch('./function/uploadpdf', { // Change URL to actual endpoint that accepts file uploads
+                        method: 'POST',
+                        body: data,
+                        // mode: 'no-cors' removed because it blocks access to response data
+                    });
+
+                    // Check if the response is OK before parsing it as JSON
+                    if (res.ok) {
+                        const resData = await res.json();
+                        console.log(resData);
+                    } else {
+                        console.log(`Error: ${res.status} ${res.statusText}`);
+                    }
+                } catch (err) {
+                    console.log(err.message);
+                }
+                window.location.replace("../index.html");
+            });
+        </script>
+
+    </div>
+</div>
+</body>
+
+</html>
