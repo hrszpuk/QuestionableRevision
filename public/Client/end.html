@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="end.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="host.css">
+</head>
+<body>
+<div class="main">
+    <h1 class="stats" style="top: 20%">Your position was: <span id="pos">1</span> </h1>
+    <h1 class="stats" style="top: 30%">correct answers: <span id="cr">1</span> </h1>
+    <h1 class="stats" style="top: 40%">wrong answers: <span id="wr">1</span> </h1>
+    <button id="finish-game-btn" class="Main-Button" onclick="finishGame()">return</button>
+
+</div>
+</body>
+<script>
+
+
+    const pos = document.getElementById('pos');
+    pos.textContent = "1";
+
+
+    function finishGame() {
+        // Your game logic here
+        console.log("Game ended!");
+        window.location.replace("../index.html");
+    }
+
+</script>
+
+</html>
