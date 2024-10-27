@@ -2,3 +2,7 @@
 02:47:35.362 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
 02:47:42.976 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 206ms, init: 0ms
 02:47:43.239 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace questionablerevision-default-rtdb status Active to Active
+02:49:17.856 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+02:49:17.868 [NamespaceSystem-akka.actor.default-dispatcher-9] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: questionablerevision-default-rtdb
+02:49:17.883 [NamespaceSystem-akka.actor.default-dispatcher-12] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for questionablerevision-default-rtdb
+02:49:17.891 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
