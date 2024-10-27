@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="host.css">
+</head>
+<body>
+<div class="main">
+    <div class="Title">
+        <h1>Questionable Revision</h1>
+
+    </div>
+    <div class="option">
+        <h2>Select Option</h2>
+    </div>
+    <div class="Host-Client">
+        <div class="filedrag">
+            <form id="form">
+                <label for="file">Choose file to upload</label>
+                <input type="file" id="file" name="file">
+                <button type="submit" id="submit-btn">Load File</button>
+            </form>
+        </div>
+
+        <script>
+            const form = document.getElementById('form');
+
+            form.addEventListener('submit', async event => {
+                event.preventDefault();
+
+                const data = new FormData(form);
+                console.log(Array.from(data));
+
+                // Check if there is a file in the FormData
+                const hasFile = Array.from(data).some(([key, value]) => value instanceof File);
+
+                if (hasFile) {
+                    try {
+                        const res = await fetch('../function/uploadpdf?filename=quiz.pdf', { // Change URL to actual endpoint that accepts file uploads
+                            method: 'POST',
+                            body: data,
+                        });
+
+                        // Check if the response is OK before parsing it as JSON
+                        if (res.ok) {
+                            const resData = await res.json();
+                            console.log(resData);
+
+                            // Redirect to start.html only if the upload was successful
+                            window.location.replace("start.html");
+                        } else {
+                            console.log(`Error: ${res.status} ${res.statusText}`);
+                        }
+
+                    } catch (err) {
+                        console.log(err.message);
+                    }
+                } else {
+                    console.log("No file submitted.");
+                }
+
+
+            });
+        </script>
+
+    </div>
+</div>
+<script type="module" src="../js/firebase.js"></script>
+<script type="module" src="../js/library.js"></script>
+<script type="module" src="../js/index.js"></script>
+</body>
+
+</html>

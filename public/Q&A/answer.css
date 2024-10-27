@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Jua';
+  src: url('../fonts/Jua-Regular.ttf') format('truetype'); /* Adjust the path and format if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+
+
+  font-family: 'Jua', sans-serif;
+}
+
+h2 {
+
+
+
+  font-family: 'Jua', sans-serif;
+}
+
+body {
+  background-color: #9FBFB5;
+}
+
+#answer {
+  margin-top: 5%;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+  background-color:#95B6AC ;
+  border-radius: 15px;
+  padding:5px;
+
+}
+#title{
+  margin-top: 5%;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+  background-color:#95B6AC ;
+  border-radius: 15px;
+  padding:5px;
+}

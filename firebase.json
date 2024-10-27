@@ -2,6 +2,7 @@
   "functions": [
     {
       "source": "functions",
+      "region": "europe-west1",
       "codebase": "default",
       "ignore": [
         "node_modules",
@@ -9,14 +10,30 @@
         "firebase-debug.log",
         "firebase-debug.*.log",
         "*.local"
-      ],
-      "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run lint"
       ]
     }
   ],
   "hosting": {
     "public": "public",
+    "headers": [
+      {
+        "source": "/function/**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET, POST, OPTIONS"
+          },
+          {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Content-Type"
+          }
+        ]
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -24,8 +41,62 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/",
         "destination": "/index.html"
+      },
+      {
+        "source": "/function/echo",
+        "function": {
+          "functionId": "echo"
+        }
+      },
+      {
+        "source": "/function/uploadpdf",
+        "function": {
+          "functionId": "uploadpdf"
+        }
+      },
+      {
+        "source": "/function/lobbyStart",
+        "function": {
+          "functionId": "lobbyStart"
+        }
+      },
+      {
+        "source": "/function/lobbyClose",
+        "function": {
+          "functionId": "lobbyClose"
+        }
+      },
+      {
+        "source": "/function/lobbyJoin",
+        "function": {
+          "functionId": "lobbyStart"
+        }
+      },
+      {
+        "source": "/function/lobbyLeave",
+        "function": {
+          "functionId": "lobbyClose"
+        }
+      },
+      {
+        "source": "/function/createUser",
+        "function": {
+          "functionId": "createUser"
+        }
+      },
+      {
+        "source": "/function/processPdf",
+        "function": {
+          "functionId": "processPdf"
+        }
+      },
+      {
+        "source": "/function/advanceQuestion",
+        "function": {
+          "functionId": "advanceQuestion"
+        }
       }
     ]
   },

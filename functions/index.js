@@ -1,19 +1,26 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+const { initializeApp } = require("firebase-admin/app");
 
-const {onRequest} = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+initializeApp({
+    databaseURL: 'https://questionablerevision-default-rtdb.europe-west1.firebasedatabase.app/',
+    storageBucket: 'questionablerevision.appspot.com'
+});
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+const {echo} = require("./src/echo");
+const {uploadpdf} = require("./src/uploadpdf");
+const {processPdf} = require("./src/process-pdf");
+const {lobbyStart} = require("./src/lobby-start");
+const {lobbyClose} = require("./src/lobby-close");
+const {lobbyJoin} = require("./src/lobby-join");
+const {createUser} = require("./src/create-user")
+const {advanceQuestion} = require("./src/advance-question")
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+// Remember to add new functions to the rewrites in the same format as the others.
+exports.echo = echo;
+exports.uploadpdf = uploadpdf;
+exports.processPdf = processPdf;
+exports.lobbyStart = lobbyStart;
+exports.lobbyClose = lobbyClose;
+exports.lobbyJoin = lobbyJoin;
+exports.createUser = createUser;
+exports.advanceQuestion = advanceQuestion;
+
