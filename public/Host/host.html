@@ -37,7 +37,7 @@
 
                 if (hasFile) {
                     try {
-                        const res = await fetch('./function/uploadpdf', { // Change URL to actual endpoint that accepts file uploads
+                        const res = await fetch('../function/uploadpdf?filename=quiz.pdf', { // Change URL to actual endpoint that accepts file uploads
                             method: 'POST',
                             body: data,
                         });
@@ -59,7 +59,7 @@
                 } else {
                     console.log("No file submitted.");
                 }
-            });
+
 
             });
         </script>
