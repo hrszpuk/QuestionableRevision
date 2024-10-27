@@ -1,8 +1,9 @@
-02:47:35.121 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-02:47:35.362 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
-02:47:42.976 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 206ms, init: 0ms
-02:47:43.239 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace questionablerevision-default-rtdb status Active to Active
-02:49:17.856 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
-02:49:17.868 [NamespaceSystem-akka.actor.default-dispatcher-9] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: questionablerevision-default-rtdb
-02:49:17.883 [NamespaceSystem-akka.actor.default-dispatcher-12] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for questionablerevision-default-rtdb
-02:49:17.891 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
+04:01:29.089 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+04:01:29.344 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+04:01:37.046 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 176ms, init: 0ms
+04:01:37.142 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace questionablerevision-default-rtdb status Active to Active
+04:07:24.287 [FirebaseWorkerPool-1-4] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace questionablerevision, but the emulator is configured for questionablerevision-default-rtdb. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+04:07:24.296 [NamespaceSystem-akka.actor.default-dispatcher-17] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision successfully activated FBKV (SurveyIdle(0)) wait: 4ms, init: 0ms
