@@ -37,6 +37,18 @@
         }
       },
       {
+        "source": "/function/lobbyStart",
+        "function": {
+          "functionId": "lobbyStart"
+        }
+      },
+      {
+        "source": "/function/lobbyClose",
+        "function": {
+          "functionId": "lobbyClose"
+        }
+      },
+      {
         "source": "/function/generateQuestionsAndAnswers",
         "function": {
           "functionId": "generateQuestionsAndAnswers"
