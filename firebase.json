@@ -67,9 +67,9 @@
         }
       },
       {
-        "source": "/function/generateQuestionsAndAnswers",
+        "source": "/function/processPdf",
         "function": {
-          "functionId": "generateQuestionsAndAnswers"
+          "functionId": "processPdf"
         }
       }
     ]
