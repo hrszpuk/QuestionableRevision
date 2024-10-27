@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './public/js/index.js',  // Main JS file to bundle
@@ -22,7 +23,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,  // Load CSS into JavaScript
-                use: ['style-loader', 'css-loader'],
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
         ],
     },
@@ -30,6 +31,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html',  // Use your existing index.html
             inject: 'body',  // Inject the bundled JS into the body
+        }),
+        ,
+        new MiniCssExtractPlugin({
+            filename: '[name].css',  // Output CSS file
         }),
     ],
     mode: 'development',  // Switch to 'production' for production builds
