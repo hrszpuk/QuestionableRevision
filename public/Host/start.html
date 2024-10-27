@@ -17,6 +17,10 @@
         <h1>Players in lobby: <span id="val">0</span> </h1>
     </div>
 
+    <div id="code">
+        <h1>Players in lobby: <span id="Gcode">0</span> </h1>
+    </div>
+
     <div id="start">
         <button id="submit-game-btn" class="Main-Button" onclick="startGame()">Start Game</button>
     </div>
@@ -30,7 +34,8 @@
     const val = document.getElementById('val');
     val.textContent = 3;
 
-
+    const gCode = document.getElementById('Gcode');
+    gCode.textContent = "38g7dy";
         function startGame() {
         // Your game logic here
         console.log("Game started!");
