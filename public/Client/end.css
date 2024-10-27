@@ -7,14 +7,9 @@
 #finish-game-btn
 {
 
-    padding: 10px
-;
-
-    align-items: center;
-    justify-items: center;
-    justify-self: center;
-    align-self: center;
-
+    padding: 20px;
+    background-color:#1D96B6;
+    border-radius: 30px;
 }
 
 body {
@@ -30,24 +25,20 @@ body {
     justify-items: center;
     justify-self: center;
     align-self: center;
-
-    background-color: cadetblue;
-    border-radius: 10px;
+    z-index: 10;
+    background-color: #95B6AC;
+    border-radius: 20px;
 
 }
-body {
-    margin: 0;
-    overflow: hidden; /* Prevents scrollbars */
-}
+.return
+{
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    z-index: 10;
 
-.image-container {
-    position: absolute;
 
-    left: 0;
-    transform: translateY(-50%);
-    white-space: nowrap; /* Prevents line breaks for the image */
-}
 
-.looping-image {
-    height: 900px; /* Adjust the height as needed */
+
 }

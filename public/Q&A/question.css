@@ -1,36 +1,49 @@
-h1 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  /* position: fixed; */
-  /* top: 15%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
-  font-family: 'Times New Roman', Times, serif;
+@font-face {
+  font-family: 'Jua';
+  src: url('../fonts/Jua-Regular.ttf') format('truetype'); /* Adjust the path and format if necessary */
+  font-weight: normal;
+  font-style: normal;
 }
 
+h1 {
+
+
+  font-family: 'Jua', sans-serif;
+}
+
+h2 {
+
+
+
+  font-family: 'Jua', sans-serif;
+}
 
 body {
   background-color: #9FBFB5;
-  width: 100%;
+}
+.Question {
+  font-family: 'Jua', sans-serif;
+  margin-top: 5%;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+  background-color:#95B6AC ;
+  border-radius: 15px;
+  padding:5px;
+
 }
 
-.Question {
-  #question-text {
-    text-align: center;
-    font-size: 36px;
-    /* position: fixed; */
-    /* top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    /* width: fit-content; */
-    /* width: 100%; */
-
-  }
-
+.Title
+{
+  margin-top: 5%;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+  background-color:#95B6AC ;
+  border-radius: 15px;
+  padding:5px;
 }
 
 .Waiting {
@@ -43,6 +56,7 @@ body {
 
   text-align: center;
   display: block;
+
 }
 
 .border {
@@ -51,6 +65,7 @@ body {
 
 
 .button {
+  font-family: 'Jua', sans-serif;
   background-color: white;
   border: none;
   border-radius: 5px;
@@ -66,3 +81,81 @@ body {
   /* justify-items: center; */
   width: 40%;
 }
+
+#answer-a
+{
+  background-color: #235de7;
+  font-family: 'Jua', sans-serif;
+
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  /* align-items: center; */
+  /* justify-items: center; */
+  width: 40%;
+}
+#answer-b
+{
+  background-color: #a1111c;
+  font-family: 'Jua', sans-serif;
+
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  /* align-items: center; */
+  /* justify-items: center; */
+  width: 40%;
+}
+#answer-c
+{
+  background-color: #067a10;
+  font-family: 'Jua', sans-serif;
+
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  /* align-items: center; */
+  /* justify-items: center; */
+  width: 40%;
+}
+#answer-d
+{
+  background-color: #bbae10;
+  font-family: 'Jua', sans-serif;
+
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  /* align-items: center; */
+  /* justify-items: center; */
+  width: 40%;
+}
+
