@@ -31,7 +31,11 @@ exports.lobbyStart = onRequest({ region: 'europe-west1' }, async (req, res) => {
                 hostIp: ip,
                 createdAt: Date.now(),
                 status: 'waiting',
-                players: {}
+                players: [{
+                    username: req.body.username,
+                    ip: ip.toString(),
+                    correctly_answered: 0,
+                }]
             };
 
             await lobbyRef.set(lobbyData);
