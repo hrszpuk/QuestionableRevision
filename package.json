@@ -4,7 +4,8 @@
     "firebase": "^11.0.1",
     "firebase-admin": "^12.7.0",
     "firebase-functions": "^6.1.0",
-    "firebase-tools": "^1.2.0"
+    "firebase-tools": "^1.2.0",
+    "glob": "^11.0.0"
   },
   "scripts": {
     "build": "webpack",
@@ -15,6 +16,7 @@
     "@babel/preset-env": "^7.26.0",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.1",
     "style-loader": "^4.0.0",
