@@ -1,11 +1,22 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
-const cors = require('cors')({ origin: true });
+const { initializeApp } = require("firebase-admin/app");
 
-admin.initializeApp();
-
-exports.echo = functions.https.onRequest((req, res) => {
-    cors(req, res, () => {
-        res.status(200).send({ echo: req.body });
-    });
+initializeApp({
+    databaseURL: 'https://questionablerevision-default-rtdb.europe-west1.firebasedatabase.app/',
+    storageBucket: 'questionablerevision.appspot.com'
 });
+
+const {echo} = require("./src/echo");
+const {uploadpdf} = require("./src/uploadpdf");
+const {processPdf} = require("./src/process-pdf");
+const {lobbyStart} = require("./src/lobby-start");
+const {lobbyClose} = require("./src/lobby-close");
+const {createUser} = require("./src/create-user")
+
+// Remember to add new functions to the rewrites in the same format as the others.
+exports.echo = echo;
+exports.uploadpdf = uploadpdf;
+exports.processPdf = processPdf;
+exports.lobbyStart = lobbyStart;
+exports.lobbyClose = lobbyClose;
+exports.createUser = createUser;
+

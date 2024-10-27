@@ -33,13 +33,43 @@
       {
         "source": "/function/uploadpdf",
         "function": {
-          "functionID": "uploadBytes"
+          "functionId": "uploadpdf"
         }
       },
       {
-        "source": "function/generateQuestionsAndAnswers",
+        "source": "/function/lobbyStart",
         "function": {
-          "functionID": "generateQuestionsAndAnswers"
+          "functionId": "lobbyStart"
+        }
+      },
+      {
+        "source": "/function/lobbyClose",
+        "function": {
+          "functionId": "lobbyClose"
+        }
+      },
+      {
+        "source": "/function/lobbyJoin",
+        "function": {
+          "functionId": "lobbyStart"
+        }
+      },
+      {
+        "source": "/function/lobbyLeave",
+        "function": {
+          "functionId": "lobbyClose"
+        }
+      },
+      {
+        "source": "/function/createUser",
+        "function": {
+          "functionId": "createUser"
+        }
+      },
+      {
+        "source": "/function/processPdf",
+        "function": {
+          "functionId": "processPdf"
         }
       }
     ]
