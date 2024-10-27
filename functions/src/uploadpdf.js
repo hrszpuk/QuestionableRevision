@@ -3,7 +3,7 @@ const {uploadBytes} = require("firebase-admin/storage");
 const cors = require('cors')({ origin: true });
 
 exports.uploadpdf = onRequest(
-    {timeoutSeconds: 1200},
+    {timeoutSeconds: 1200, region: 'europe-west1'},
     (req, res) => {
         cors(req, res, () => {
             const userFile = req.body;
