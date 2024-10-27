@@ -1,13 +1,21 @@
+@font-face {
+  font-family: 'Jua';
+  src: url('fonts/Jua-Regular.ttf') format('truetype'); /* Adjust the path and format if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
 
 
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Jua', sans-serif;
 }
 
 h2 {
 
 
-  font-family: 'Times New Roman', Times, serif;
+
+  font-family: 'Jua', sans-serif;
 }
 
 body {
@@ -16,33 +24,56 @@ body {
 }
 
 .Host-Client {
+
   background-color: #1D96B6;
-  border-radius: 5px;
-  padding: 16px 16px;
-  position: absolute;
+  border-radius: 20px;
+  margin-top: 1%;
+
   gap: 10px;
   align-items: center;
   justify-items: center;
   justify-self: center;
   align-self: center;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 30px;
 }
 
 .Main-Button {
   background-color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block; /* Change to block for vertical stacking */
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 10px auto; /* Center the button and add vertical spacing */
   cursor: pointer;
+  width: fit-content; /* Adjust width based on content or use a specific width */
+  font-family: 'Jua', sans-serif;
+}
+.Title
+{
+  margin-top: 5%;
   align-items: center;
   justify-items: center;
+  justify-self: center;
+  align-self: center;
+  background-color:#95B6AC ;
+  border-radius: 15px;
+  padding:5px;
+}
+.option
+{
+  margin-top: 10%;
+background-color:#95B6AC ;
+  border-radius: 15px;
+  padding:5px;
+
+
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+
 }

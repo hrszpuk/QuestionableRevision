@@ -1,17 +1,33 @@
+@font-face {
+  font-family: 'Jua';
+  src: url('../fonts/Jua-Regular.ttf') format('truetype'); /* Adjust the path and format if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
-  position: fixed;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Times New Roman', Times, serif;
+
+
+  font-family: 'Jua', sans-serif;
 }
 
 h2 {
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Times New Roman', Times, serif;
+
+
+
+  font-family: 'Jua', sans-serif;
+}
+
+.Title
+{
+  margin-top: 5%;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+  background-color:#95B6AC ;
+  border-radius: 15px;
+  padding:5px;
 }
 
 body {
@@ -19,9 +35,11 @@ body {
 }
 
 .Client-Join {
+  font-family: 'Jua', sans-serif;
+  margin-top: 5%;
   background-color: #1D96B6;
   border-radius: 5px;
-  padding: 16px 16px;
+  padding: 30px;
   display: grid;
   grid-auto-flow: row;
   gap: 10px;
@@ -29,10 +47,8 @@ body {
   justify-items: center;
   justify-self: center;
   align-self: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+
 }
 
 .Back-Button {
@@ -41,13 +57,22 @@ body {
   border-radius: 5px;
   color: black;
   padding: 15px 32px;
-  text-align: centre;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  position: relative;
-  align-items: center;
-  justify-items: center;
+
+  /* Add these properties */
+  position: absolute; /* or fixed */
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+}
+#join-button {
+  font-family: 'Jua', sans-serif;
+  padding: 10px 20px; /* Add padding for better appearance */
+  display: block; /* Ensure it behaves as a block element */
+  margin: 0 auto; /* Center the button horizontally */
+  text-align: center; /* Center text inside the button */
 }

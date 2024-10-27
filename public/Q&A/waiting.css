@@ -17,47 +17,29 @@ h2 {
 
     font-family: 'Jua', sans-serif;
 }
-
 body {
     background-color: #9FBFB5;
     height: 100%;
 }
-#start
-{
-    margin-top: 10%;
+.title{
+    margin-top: 5%;
     align-items: center;
     justify-items: center;
     justify-self: center;
     align-self: center;
-    background-color:#1D96B6 ;
-    padding: 20px;
-    border-radius: 15px;
-}
-#players
-{
     background-color:#95B6AC ;
-    padding: 20px;
     border-radius: 15px;
-    margin-top: 10%;
-    align-items: center;
-    justify-items: center;
-    justify-self: center;
-    align-self: center;
+    padding:5px;
 }
 
-.Main-Button {
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position: relative;
+.Waiting{
+    font-family: 'Jua', sans-serif;
+    margin-top: 5%;
     align-items: center;
     justify-items: center;
+    justify-self: center;
+    align-self: center;
+    background-color:#95B6AC ;
+    border-radius: 15px;
+    padding:5px;
 }

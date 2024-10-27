@@ -10,25 +10,14 @@
 
 
 
-        <h1 class="stats" style="top: 20%">Your position was: <span id="pos">1</span> </h1>
-        <h1 class="stats" style="top: 30%">correct answers: <span id="cr">1</span> </h1>
-        <h1 class="stats" style="top: 40%">wrong answers: <span id="wr">1</span> </h1>
-        <div class="stats">
-            <button id="finish-game-btn" class="stats" onclick="finishGame()">return</button>
+        <h1 class="stats" style="margin-top: 5%">Your position was: <span id="pos">1</span> </h1>
+        <h1 class="stats" style="margin-top: 5%">Correct Answers: <span id="cr">1</span> </h1>
+        <h1 class="stats" style="margin-top: 5%">Wrong Answers: <span id="wr">1</span> </h1>
+        <div class="return">
+            <button id="finish-game-btn" onclick="finishGame()">return</button>
         </div>
 
 
-        <div class="image-container"  style="top: -30%">
-            <img src="star1.png" alt="Looping Image" class="looping-image">
-        </div>
-
-        <div class="image-container"  style="top: 50%">
-            <img src="star1.png" alt="Looping Image" class="looping-image">
-        </div>
-
-        <div class="image-container" style="top: 50%">
-            <img src="star1.png" alt="Looping Image" class="looping-image">
-        </div>
 
 </body>
 <script>
@@ -44,31 +33,7 @@
         window.location.replace("../index.html");
     }
 
-    const imageContainers = document.querySelectorAll('.image-container'); // Select all containers
-    const speed = 2; // Speed of the image movement
-    const screenWidth = window.innerWidth; // Get the width of the viewport
 
-    // Initialize positions for each container
-    const positions = Array.from(imageContainers).map(() => 0);
-
-    function animate() {
-        // Update each container's position
-        imageContainers.forEach((container, index) => {
-            positions[index] += speed; // Move the image to the right
-
-            // Reset position when it goes off-screen
-            if (positions[index] > screenWidth) {
-                positions[index] = -container.querySelector('.looping-image').width; // Start again from the left
-            }
-
-            container.style.transform = `translateX(${positions[index]}px)`; // Update the position
-        });
-
-        requestAnimationFrame(animate); // Call animate recursively
-    }
-
-    // Start the animation
-    animate();
 </script>
 
 </html>
