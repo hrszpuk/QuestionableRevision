@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 
 const db = getFirestore();
 
-exports.generateQuestionsAndAnswers = onRequest(async (req, res) => {
+exports.generateQuestionsAndAnswers = onRequest({ region: 'europe-west1' }, async (req, res) => {
     try {
         const docId = req.query.docId;  // Assume the PDF doc ID is passed as a query parameter
         if (!docId) {
