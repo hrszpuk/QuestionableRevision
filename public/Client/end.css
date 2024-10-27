@@ -1,0 +1,44 @@
+.Main-Button {
+
+
+
+}
+
+#finish-game-btn
+{
+
+    padding: 20px;
+    background-color:#1D96B6;
+    border-radius: 30px;
+}
+
+body {
+    background-color: #9FBFB5;
+    height: 100%;
+}
+.stats
+{
+    padding: 10px
+;
+
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    z-index: 10;
+    background-color: #95B6AC;
+    border-radius: 20px;
+
+}
+.return
+{
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    z-index: 10;
+
+
+
+
+}

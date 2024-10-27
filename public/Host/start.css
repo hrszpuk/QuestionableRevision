@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Jua';
+    src: url('../fonts/Jua-Regular.ttf') format('truetype'); /* Adjust the path and format if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+
+
+    font-family: 'Jua', sans-serif;
+}
+
+h2 {
+
+
+
+    font-family: 'Jua', sans-serif;
+}
+
+body {
+    background-color: #9FBFB5;
+    height: 100%;
+}
+#start
+{
+    margin-top: 5%;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    background-color:#1D96B6 ;
+    padding: 20px;
+    border-radius: 15px;
+}
+#code
+{
+    margin-top: 1%;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    background-color: #9FBFB5 ;
+    padding: 20px;
+    border-radius: 15px;
+}
+#players
+{
+    background-color:#95B6AC ;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 5%;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.Main-Button {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+}

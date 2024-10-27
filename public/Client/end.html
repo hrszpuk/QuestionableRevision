@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="end.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+
+
+        <h1 class="stats" style="margin-top: 5%">Your position was: <span id="pos">1</span> </h1>
+        <h1 class="stats" style="margin-top: 5%">Correct Answers: <span id="cr">1</span> </h1>
+        <h1 class="stats" style="margin-top: 5%">Wrong Answers: <span id="wr">1</span> </h1>
+        <div class="return">
+            <button id="finish-game-btn" onclick="finishGame()">return</button>
+        </div>
+
+
+
+</body>
+<script>
+
+
+    const pos = document.getElementById('pos');
+    pos.textContent = "1";
+
+
+    function finishGame() {
+        // Your game logic here
+        console.log("Game ended!");
+        window.location.replace("../index.html");
+    }
+
+
+</script>
+
+</html>
