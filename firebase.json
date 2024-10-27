@@ -49,6 +49,24 @@
         }
       },
       {
+        "source": "/function/lobbyJoin",
+        "function": {
+          "functionId": "lobbyStart"
+        }
+      },
+      {
+        "source": "/function/lobbyLeave",
+        "function": {
+          "functionId": "lobbyClose"
+        }
+      },
+      {
+        "source": "/function/createUser",
+        "function": {
+          "functionId": "createUser"
+        }
+      },
+      {
         "source": "/function/generateQuestionsAndAnswers",
         "function": {
           "functionId": "generateQuestionsAndAnswers"
