@@ -1,5 +1,5 @@
 const { onRequest } = require("firebase-functions/v2/https");
-const { getIpAddress, generateLobbyCode } = require("./_utilities");
+const { generateUniqueCode } = require("./_utilities");
 const cors = require('cors')({ origin: true });
 const admin = require('firebase-admin');
 
@@ -14,24 +14,18 @@ const db = admin.database();
 exports.lobbyStart = onRequest({ region: 'europe-west1' }, async (req, res) => {
     cors(req, res, async () => {
         try {
-            const ip = getIpAddress(req);
-
-            if (!ip || ip === "undefined") {
-                console.error("Error: Host IP is undefined");
-                return res.status(400).send("Host IP address is undefined");
-            }
-
-            let lobbyCode = generateLobbyCode();
+            let lobbyCode = generateUniqueCode();
 
             const lobbyRef = db.ref('lobbies').push();
             const lobbyId = lobbyRef.key;
 
             const lobbyData = {
                 lobbyCode: lobbyCode,
-                hostIp: ip,
+                question_set: "", //TODO(remy) Add this in once ben has fixed his shit
                 createdAt: Date.now(),
                 status: 'waiting',
                 players: [{
+                    userid: generateUniqueCode(10),
                     username: req.body.username,
                     ip: ip.toString(),
                     correctly_answered: 0,
