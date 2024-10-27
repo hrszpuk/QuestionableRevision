@@ -1,7 +1,8 @@
 const { initializeApp } = require("firebase-admin/app");
 
 initializeApp({
-    databaseURL: 'https://questionablerevision-default-rtdb.europe-west1.firebasedatabase.app/'
+    databaseURL: 'https://questionablerevision-default-rtdb.europe-west1.firebasedatabase.app/',
+    storageBucket: 'questionablerevision.appspot.com'
 });
 
 const {echo} = require("./src/echo");
