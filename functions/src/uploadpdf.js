@@ -1,24 +1,26 @@
 const {onRequest} = require("firebase-functions/v2/https");
-const {uploadBytes} = require("firebase-admin/storage");
+const {getStorage} = require("firebase-admin/storage");
 const cors = require('cors')({ origin: true });
 
+const bucket = getStorage().bucket();
+
 exports.uploadpdf = onRequest(
-    {timeoutSeconds: 1200},
+    {timeoutSeconds: 300},
     (req, res) => {
-        cors(req, res, () => {
+        cors(req, res, async () => {
             const userFile = req.body;
+            const buffer = Buffer.from(userFile);
+            const fileName = req.query.filename;
 
-            if (userFile === "") {
-                res.status(200).send("You got no rizz brotha");
-            }
-
-            uploadBytes(userFile, userFile)
-                .then((snapshot) => {
-                    res.status(200).send("Successfully uploaded file!");
-                })
-                .catch((error) => {
-                    res.status(404).send("File upload failed: "+ error);
+            try {
+                const file = bucket.file(fileName);
+                await file.save(buffer, {
+                    metadata: {contentType: 'application/pdf'},
                 });
+                res.status(200).send({"Successfully uploaded file!": fileName});
+            } catch (error) {
+                res.status(500).send("File upload failed: " + error.message);
+            }
         })
     },
 );
