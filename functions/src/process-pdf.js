@@ -54,6 +54,8 @@ exports.processPdf = onRequest({ region: 'europe-west1' }, async (req, res) => {
                 return
             }
 
+            await bucket.file(filename).delete();
+
             res.status(200).json({
                 message: 'PDF processed and questions generated successfully',
                 questions: questionSetJson,
