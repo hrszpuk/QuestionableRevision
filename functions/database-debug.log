@@ -7,3 +7,8 @@ namespace questionablerevision, but the emulator is configured for questionabler
 opt-out of single project mode add/set the singleProjectMode: false property in 
 the firebase.json emulators config. 
 01:07:19.140 [NamespaceSystem-akka.actor.default-dispatcher-11] INFO com.firebase.core.namespace.NamespaceActor - questionablerevision successfully activated FBKV (SurveyIdle(0)) wait: 4ms, init: 0ms
+01:35:57.570 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+01:35:57.579 [NamespaceSystem-akka.actor.default-dispatcher-61] INFO com.firebase.core.namespace.Terminator$Terminator - 2 actors left to terminate: questionablerevision-default-rtdb, questionablerevision
+01:35:57.589 [NamespaceSystem-akka.actor.default-dispatcher-59] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for questionablerevision-default-rtdb
+01:35:57.589 [NamespaceSystem-akka.actor.default-dispatcher-62] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for questionablerevision
+01:35:57.595 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
