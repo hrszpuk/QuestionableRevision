@@ -5,7 +5,10 @@ const cors = require('cors')({ origin: true });
 const bucket = getStorage().bucket();
 
 exports.uploadpdf = onRequest(
-    {timeoutSeconds: 300},
+    {
+        region: 'europe-west1',
+        timeoutSeconds: 300
+    },
     (req, res) => {
         cors(req, res, async () => {
             const userFile = req.body;
