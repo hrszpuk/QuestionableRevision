@@ -2,6 +2,7 @@
   "functions": [
     {
       "source": "functions",
+      "region": "europe-west1",
       "codebase": "default",
       "ignore": [
         "node_modules",
@@ -89,6 +90,12 @@
         "source": "/function/processPdf",
         "function": {
           "functionId": "processPdf"
+        }
+      },
+      {
+        "source": "/function/advanceQuestion",
+        "function": {
+          "functionId": "advanceQuestion"
         }
       }
     ]
