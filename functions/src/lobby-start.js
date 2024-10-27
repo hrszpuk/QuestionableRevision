@@ -14,8 +14,10 @@ const db = admin.database();
 exports.lobbyStart = onRequest({ region: 'europe-west1' }, async (req, res) => {
     cors(req, res, async () => {
         try {
-            let lobbyCode = generateUniqueCode();
+            console.log('Request Body:', req.body);
+            const username = req.body.username;
 
+            let lobbyCode = generateUniqueCode();
             const lobbyRef = db.ref('lobbies').push();
             const lobbyId = lobbyRef.key;
 
@@ -27,7 +29,6 @@ exports.lobbyStart = onRequest({ region: 'europe-west1' }, async (req, res) => {
                 players: [{
                     userid: generateUniqueCode(10),
                     username: req.body.username,
-                    ip: ip.toString(),
                     correctly_answered: 0,
                 }]
             };
