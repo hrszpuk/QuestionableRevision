@@ -5,32 +5,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- update the version number as needed -->
-  <script defer src="/__/firebase/11.0.1/firebase-app-compat.js"></script>
-  <!-- include only the Firebase features as you need -->
-  <script defer src="/__/firebase/11.0.1/firebase-auth-compat.js"></script>
-  <script defer src="/__/firebase/11.0.1/firebase-database-compat.js"></script>
-  <script defer src="/__/firebase/11.0.1/firebase-firestore-compat.js"></script>
-  <script defer src="/__/firebase/11.0.1/firebase-functions-compat.js"></script>
-  <script defer src="/__/firebase/11.0.1/firebase-messaging-compat.js"></script>
-  <script defer src="/__/firebase/11.0.1/firebase-storage-compat.js"></script>
-  <script defer src="/__/firebase/11.0.1/firebase-analytics-compat.js"></script>
-  <script defer src="/__/firebase/11.0.1/firebase-remote-config-compat.js"></script>
-  <script defer src="/__/firebase/11.0.1/firebase-performance-compat.js"></script>
-  <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
+<div w3-include-html="background.html"></div>
+<div id="content"></div>
+
+
   <div class="main">
     <div class="Title">
       <h1>Questionable Revision</h1>
-      <h2>Select Option</h2>
+
+
+
+
+
+
+
+  </div>
+
+    <div class="option">
+      <h2 >Select Option</h2>
     </div>
     <div class="Host-Client">
       <a href="Host/host.html">
@@ -40,8 +36,10 @@
         <button class="Main-Button">Join Game</button>
       </a>
     </div>
-
   </div>
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/library.js"></script>
+<script type="module" src="js/index.js"></script>
 </body>
 
 </html>

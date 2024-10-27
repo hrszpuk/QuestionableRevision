@@ -26,7 +26,11 @@ exports.lobbyJoin = onRequest({ region: 'europe-west1' }, async (req, res) => {
                 body: JSON.stringify({lobbyCode, userId, userName})
             });
 
-            return res.status(200).send({ message: "User created successfully." });
+            if (response.ok)
+            { return res.status(200).send({ message: "User created successfully." }); }
+            else {
+                return res.status(500).send("Could not create new user")
+            }
 
         } catch (error) {
             console.error('Error joining lobby:', error);

@@ -11,26 +11,30 @@ if (admin.apps.length === 0) {
 
 const db = admin.database();
 
+// You are required put the question data into this function
 exports.lobbyStart = onRequest({ region: 'europe-west1' }, async (req, res) => {
     cors(req, res, async () => {
         try {
-            console.log('Request Body:', req.body);
-            const username = req.body.username;
+            let questions = req.body;
 
             let lobbyCode = generateUniqueCode();
+
             const lobbyRef = db.ref('lobbies').push();
             const lobbyId = lobbyRef.key;
 
             const lobbyData = {
                 lobbyCode: lobbyCode,
-                question_set: "", //TODO(remy) Add this in once ben has fixed his shit
+                question_set: questions,
                 createdAt: Date.now(),
                 status: 'waiting',
                 players: [{
                     userid: generateUniqueCode(10),
                     username: req.body.username,
                     correctly_answered: 0,
-                }]
+                    hasAnswered: false,
+                }],
+                totalRounds: questions.length,
+                currentRound: 0,
             };
 
             await lobbyRef.set(lobbyData);
