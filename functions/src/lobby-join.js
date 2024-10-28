@@ -8,11 +8,11 @@ const corsHandler = cors({ origin: true });
 exports.lobbyJoin = onRequest({ region: 'europe-west1' }, async (req, res) => {
     corsHandler(req, res, async () => {
         try {
-            const { lobbyCode, userId, userName } = req.body;
+            const { lobbyCode, userName } = req.body;
 
-            if (!lobbyCode || !userId || !userName) {
+            if (!lobbyCode || !userName) {
                 return res.status(400).send("Missing lobbyCode, userId, or userName");
-            } else if (lobbyCode === "undefined" || userId === "undefined" || userName === "undefined") {
+            } else if (lobbyCode === "undefined" || userName === "undefined") {
                 return res.status(400).send("Defined: lobbyCode, userId, or userName");
             }
             
@@ -23,13 +23,27 @@ exports.lobbyJoin = onRequest({ region: 'europe-west1' }, async (req, res) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({lobbyCode, userId, userName})
+                body: JSON.stringify({userName: userName})
             });
 
-            if (response.ok)
-            { return res.status(200).send({ message: "User created successfully." }); }
-            else {
-                return res.status(500).send("Could not create new user")
+            if (response.ok) {
+                const {userId} = response.body;
+                const db = admin.database();
+
+                // Path to the lobby in Firebase Realtime Database
+                const playersRef = db.ref(`lobbies/${lobbyCode}/players/`);
+
+                // Add user to the lobby
+                const newUserRef = usersRef.push();
+                await newUserRef.set({
+                    userId: userId,
+                    userName: userName,
+                    correctlyAnswered: 3,
+                    answeredCurrent: false
+                });
+                return res.status(200).send("Success")
+            } else {
+                return res.status(400).send("Invalid lobbyCode or userName");
             }
 
         } catch (error) {

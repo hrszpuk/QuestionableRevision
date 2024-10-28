@@ -32,7 +32,7 @@
 }
 
  */
-import { getFirestore, doc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { getFirestore, doc, getDoc, updateDoc, arrayUnion } from "/firebase/firestore";
 const db = getFirestore();
 
 /* Usage:
