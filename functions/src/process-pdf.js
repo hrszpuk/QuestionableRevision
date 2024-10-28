@@ -38,7 +38,7 @@ exports.processPdf = onRequest({ region: 'europe-west1' }, async (req, res) => {
                 return
             }
 
-            const genAI = new GoogleGenerativeAI('AIzaSyD0yqVw9NcjOKCsMUrAy4H8z4y9qeTku68');
+            const genAI = new GoogleGenerativeAI();
             const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
             const result = await model.generateContent(prompt + '\n\n' + data.text);
