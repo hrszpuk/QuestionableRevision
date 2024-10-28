@@ -21,7 +21,6 @@
         <label for="host-id">Game Id: &ensp;  </label>
         <input type="text" id="host-id" name="host-id" required><br><br>
         <button id="join-button">Join</button>
-        <script src="clientJoin.js"></script>
       </form>
     </div>
     <div>
@@ -30,6 +29,19 @@
       </a>
     </div>
   </div>
+<script type="module" src="../js/functions.js">
+  import {lobbyJoin} from "../../functions";
+
+  const lobbyCode = document.getElementById("host-id")
+  const username = document.getElementById("client-name")
+  const buttonEl = document.getElementById("join-button")
+
+  buttonEl.addEventListener("click", function(){
+
+    let g = lobbyJoin(lobbyCode.value(), username.value())
+
+  })
+</script>
 </body>
 
 </html>

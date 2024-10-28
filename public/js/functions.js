@@ -65,3 +65,28 @@ async function StartLobby(questions) {
         return undefined;
     }
 }
+
+async function JoinLobby(lobbyCode, userName) {
+    try {
+        let data = {
+            lobbyCode: lobbyCode,
+            userName: userName
+        }
+        const res = await fetch('../function/lobbyJoin', { // Change URL to actual endpoint that accepts file uploads
+            method: 'POST',
+            body: JSON.stringify(data),
+        });
+
+        // Check if the response is OK before parsing it as JSON
+        if (res.ok) {
+            return await res.json();
+        } else {
+            console.log(`Error: ${res.status} ${res.statusText}`);
+            return undefined;
+        }
+
+    } catch (err) {
+        console.log(err.message);
+        return undefined;
+    }
+}
